@@ -1,6 +1,6 @@
 import Greeting from './componentes/Greeting';
 import React, { useState, useEffect } from 'react';
-
+import GameOptions from './componentes/GameOptions';
 
   const choices = ['piedra', 'papel', 'tijera'];
 
@@ -26,7 +26,10 @@ import React, { useState, useEffect } from 'react';
 
           <>
           <Greeting playerName={playerName} />
-      
+          <GameOptions onPlayerChoice={handlePlayerChoice} />
+          {winner && (
+            <button onClick={restartGame}>Reiniciar Juego</button>
+          )}
         </>
      <div/>   
   );
