@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { useState, useEffect } from 'react';
+
+
+  const choices = ['piedra', 'papel', 'tijera'];
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <h1>Piedra, Papel o Tijera</h1>
+  
+      {showWelcome ? (
+        <div id="welcome-form">
+          <p>Bienvenido al juego. Ingresa tu nombre para comenzar:</p>
+          <form onSubmit={handleNameSubmit}>
+            <input
+              type="text"
+              placeholder="Tu Nombre"
+              value={playerName}
+              onChange={(e) => setPlayerName(e.target.value)}
+            />
+            <button type="submit">Comenzar Juego</button>
+           
+          </form>
+        
   );
 }
 
