@@ -1,0 +1,14 @@
+/* Winner.css */
+
+#winner-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.5s ease; /* Animación de transición */
+  }
+  
+  .winner-animation {
+    color: #ff5722; /* Color del texto cuando hay un ganador */
+    transform: scale(1.2); /* Escala el texto para la animación */
+  }
+  
