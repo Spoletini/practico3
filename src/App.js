@@ -1,4 +1,4 @@
-
+import Greeting from './componentes/Greeting';
 import React, { useState, useEffect } from 'react';
 
 
@@ -23,7 +23,12 @@ import React, { useState, useEffect } from 'react';
             <button type="submit">Comenzar Juego</button>
            
           </form>
-        
+
+          <>
+          <Greeting playerName={playerName} />
+      
+        </>
+     <div/>   
   );
 }
 
